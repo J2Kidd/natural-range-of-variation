@@ -6,13 +6,14 @@
 #' @param x Data frame that the summary stats were generated from
 #'
 #' @return Data frame that the boxplot function can be run on
-#' @import tidyverse
+#' @importFrom tidyr spread
+#' @importFrom dplyr select
 #' @export
 
 NRV_box_df<-function(x) {
 
   x<-x %>%
-    select(-c(ResultRaw,RDC,DL))%>%
-    spread(Parameter, ResultCalc)
+    dplyr::select(-c(ResultRaw,RDC,DL))%>%
+    tidyr::spread(Parameter, ResultCalc)
 
 }

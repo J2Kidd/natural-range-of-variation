@@ -1,5 +1,7 @@
 #' Natural Range of Variation
 #'
+#'must run NRV(list(WCTL))
+#'must upload CCME.csv file (use readr, change value column to character data type)
 #'Notes: edit to have 1 dataFrame but multiple sites (i.e., run analyses for each siteID)
 #'Calculate NRV summary table and generate boxplots
 #'Can turn off boxplots with generateplots=FALSE (default =TRUE)
@@ -13,7 +15,7 @@
 #' @return Summary table of results and boxplots for all specified parameters
 #' @import ggplot2
 #' @import sqldf
-#' @import dplyr
+#' @import tibble
 #' @export
 #'
 NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TRUE) {
@@ -34,7 +36,7 @@ NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TR
 
   ## generates the summary data for all dataframe at once
   NRV_table<-NRV_stats_table(totalNRV)
-  view(NRV_table)
+  tibble::view(NRV_table)
 
   if(generateplots == TRUE) {
     boxes<-NRV_box_df(totalNRV)
@@ -42,7 +44,7 @@ NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TR
     boxes$Date <- as.character(boxes$Date)
 
     if(is.null(parameters)) {
-      parameters = sqldf("select distinct Parameter from NRV_table")
+      parameters = sqldf::sqldf("select distinct Parameter from NRV_table")
       parameters = parameters$Parameter
     }
 
@@ -52,10 +54,10 @@ NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TR
       CCME_values$value = as.numeric(CCME_values$value)
 
       query = paste("select Site,`Date`,",parameter," from boxes where ",parameter," is not null",sep="");
-      box<-sqldf(query)
+      box<-sqldf::sqldf(query)
 
-      NRV_Box <- ggplot(box, aes(x=Site, y=get(parameter), fill=Site)) +
-        geom_boxplot()+
+      NRV_Box <- ggplot2::ggplot(box, aes(x=Site, y=get(parameter), fill=Site)) +
+        ggplot2::geom_boxplot()+
         labs(x="Site", y = parameter, fill="Site")
 
       if(renderGuideline == TRUE) {

@@ -24,6 +24,8 @@ NRV(
 Summary table of results and boxplots for all specified parameters
 }
 \description{
+must run NRV(list(WCTL))
+must upload CCME.csv file (use readr, change value column to character data type)
 Notes: edit to have 1 dataFrame but multiple sites (i.e., run analyses for each siteID)
 Calculate NRV summary table and generate boxplots
 Can turn off boxplots with generateplots=FALSE (default =TRUE)

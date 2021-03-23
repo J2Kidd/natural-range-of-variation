@@ -9,8 +9,8 @@
 #' @export
 #'
 M2M <- function(x) {
-  M2M_Low <- (median(x, na.rm=TRUE)) - (2*(mad(x, na.rm = TRUE)) )
-  M2M_High <- (median(x, na.rm=TRUE)) + (2*(mad(x, na.rm = TRUE)) )
+  M2M_Low <- (stats::median(x, na.rm=TRUE)) - (2*(stats::mad(x, na.rm = TRUE)) )
+  M2M_High <- (stats::median(x, na.rm=TRUE)) + (2*(stats::mad(x, na.rm = TRUE)) )
   names(M2M_Low)<-"Lower"
   names(M2M_High)<-"Upper"
   M2M_range<-c(M2M_Low, M2M_High)

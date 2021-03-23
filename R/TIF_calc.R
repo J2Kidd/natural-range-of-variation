@@ -10,8 +10,8 @@
 #' @export
 #'
 TIF_calc <- function(x, na.rm = TRUE) {
-  TIF_Low <- (quantile(x,0.25, names=FALSE)) - (IQR(x)*1.5)
-  TIF_High <- (quantile(x,0.75, names=FALSE)) + (IQR(x)*1.5)
+  TIF_Low <- (stats::quantile(x,0.25, names=FALSE)) - (stats::IQR(x)*1.5)
+  TIF_High <- (stats::quantile(x,0.75, names=FALSE)) + (stats::IQR(x)*1.5)
   names(TIF_Low)<-"Lower"
   names(TIF_High)<-"Upper"
   TIF_range<-c(TIF_Low, TIF_High)

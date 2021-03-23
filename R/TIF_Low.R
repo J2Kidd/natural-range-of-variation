@@ -8,6 +8,6 @@
 #' @importFrom stats quantile IQR
 #' @export
 TIF_Low <- function(resultCalc) {
-  TIF <- (quantile(resultCalc,0.25, names=FALSE)) - (IQR(resultCalc)*1.5)
+  TIF <- (stats::quantile(resultCalc,0.25, names=FALSE)) - (stats::IQR(resultCalc)*1.5)
   return(TIF)
 }

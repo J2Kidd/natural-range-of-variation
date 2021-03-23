@@ -5,12 +5,12 @@
 #' @param dataFrame The data frame that contains the information formatted for the function
 #'
 #' @return Table with the NRV thresholds and associated summary statistics
-#' @import tidyverse
-#' @import dplyr
+#' @importFrom dplyr group_by do ungroup
 #' @export
 NRV_stats_table<-function(dataFrame) {
+  Site<-Parameter<-NULL
   dataFrame%>%
-    group_by(Site,Parameter)%>%
-    do(NRV_stats(.))%>%
-    ungroup()
+    dplyr::group_by(Site,Parameter)%>%
+    dplyr::do(NRV_stats(.))%>%
+    dplyr::ungroup()
 }

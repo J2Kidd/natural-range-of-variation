@@ -10,6 +10,6 @@
 #' @export
 #'
 M2M_Low <- function(resultCalc) {
-  M2M <- (median(resultCalc, na.rm=TRUE)) - (2*(mad(resultCalc, na.rm = TRUE)) )
+  M2M <- (stats::median(resultCalc, na.rm=TRUE)) - (2*(stats::mad(resultCalc, na.rm = TRUE)) )
   return(M2M)
 }

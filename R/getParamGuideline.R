@@ -24,6 +24,6 @@ getParamGuideline<-function(param) {
   else {
     match = as.list(strsplit(param, "_")[[1]])
     query = paste("select * from CCME where parameter like '",match[1],"%'",sep="")
-    return(sqldf(query))
+    return(sqldf::sqldf(query))
   }
 }

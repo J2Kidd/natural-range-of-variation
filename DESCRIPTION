@@ -17,6 +17,11 @@ Imports:
     stats,
     tidyverse,
     dplyr,
+    tidyr,
     sqldf,
     stringr,
-    ggplot2
+    ggplot2,
+    tibble,
+    expss
+Depends: 
+    R (>= 2.10)
