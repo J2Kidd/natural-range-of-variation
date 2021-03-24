@@ -54,13 +54,8 @@ If you have only one data frame and you do not want any box plots generated
 `NRV(list(WC),list("ph", "alkalinity_total"), generateplots=False)`
 
 ## Known Issues
-1. Warnings on install
 
-Warning messages:
-1: replacing previous import ‘dplyr::filter’ by ‘stats::filter’ when loading ‘NRV’ 
-2: replacing previous import ‘dplyr::lag’ by ‘stats::lag’ when loading ‘NRV’ 
-
-These are completely normal, but will be address in a future version.
+All issues and future enhancements are tracked using Git issues: https://github.com/J2Kidd/natual-range-of-variation-source/issues
 
 ## About the CCME Data Frame
 *CCME water quality guidelines for the protection of aquatic life*
