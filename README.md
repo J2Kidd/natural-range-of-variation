@@ -10,12 +10,27 @@ The NRV function requires you to format your data frame with specific column nam
 
 The NRV function allows you to read in a single data frame with all site results, or individual data frames for each site. 
 
+# Install Instructions
 
-#Install Instructions#
+## Build instructions for creating the NRV package from source
 
-install.packages("NRV")
+1. Download the source code and open "NRV.Rproj" in RStudio
+2. In the console type `library("devtools")` to download the development toolkit
+3. In the console type `check()` to build the package
+4. In the console type `install()` to install the package
 
-#Data Frame Formatting#
+## Using the NRV package from your project
+
+1. First, be sure to follow the steps above to create and install the package in your local environment
+2. After editing the CCME.csv guidelines file in the "ExampleData" folder to match your site-specific requirements, import the file. For details on the file itself, see the section below under the heading **About the CCME Data Frame**. To Import the file:
+3.1 From the "Environment" tab in RStudio click "Import Dataset"
+3.2 Select "From Text (readr)"
+3.3 Navigate to the "ExampleData"" folder and select "CCME.csv"
+3.4 Set the data type on the "value" column to be "Character"
+3.5 Click "Import"
+3.6 Celebrate with beer.
+
+# Data Frame Formatting
 Your data frame **must** be formatted in a specific way. View example data frames "NRV_WC" and "NRV_TL" to see which columns are required and the type of data inputs for each column. The required columns are:
 **Site**: A column that contains the labels for each individual waterbody that the NRV calculation will be generated for. **Note:** The NRV calculation is not run for individual sample locations, but on data collected from an individual water body or river reach. Ensure you have labelled your data appropriately and you identify the column with the water body label and not the sample location (unless there is only one sample location for each waterbody). **Ensure there are no duplicate samples** (i.e., results for the same parameter sampled on the same day) for any of the Site labels).
 **Date**: A column that contains the date that the sample was collected.
@@ -25,20 +40,20 @@ Your data frame **must** be formatted in a specific way. View example data frame
 **RDC**: Result Detection Condition: A column that identifies if the result is below the detection limit. **Note:** If the result is below the detection limit, the identifier must read *BDL*. If the result was not below the detection limit then the column should  read *NUM*.
 
 
-**Example Usage**
+## Example Usage
 If you have two (or more) data frames with site data (i.e.,one data frame for each site) and want box plots generated for each parameter and all applicable guidelines rendered.
-> NRV(list(WC,TL))
+`NRV(list(WC,TL))`
 
 If you have only one data frame and you only want box plots generated for specific parameters
-> NRV(list(WC),"ph","alkalinity_total")
+`NRV(list(WC),list("ph","alkalinity_total"))`
 
 If you have only one data frame and you only want box plots generated for specific parameters and you don't want to guideline rendered (e.g., the guideline is much higher than your max value so it skews your box plot)
-> NRV(list(WC),"ph","alkalinity_total", renderGuidline=False)
+`NRV(list(WC),list("ph","alkalinity_total"), renderGuidline=False)`
 
 If you have only one data frame and you do not want any box plots generated
-> NRV(list(WC),"ph","alkalinity_total", generateplots=False)
+`NRV(list(WC),list("ph", "alkalinity_total"), generateplots=False)`
 
-**Known Issues**
+## Known Issues
 1. Warnings on install
 
 Warning messages:
@@ -47,10 +62,10 @@ Warning messages:
 
 These are completely normal, but will be address in a future version.
 
-**About the CCME Data Frame**
+## About the CCME Data Frame
 *CCME water quality guidelines for the protection of aquatic life*
 
-Access the CCME csv file in the NRV package's git repository here:
+Access the CCME csv file in the NRV package's git repository in the "ExampleData" folder.
 This file includes CCME guidelines for the majority of parameters. You may add any parameter you see is missing. You will have to edit the parameters that have site-specific guidelines (e.g., some are dependent on hardness or pH). Currently, you must access the CCME website (https://www.ccme.ca/en/resources/pollution_prevention.html#) for the site-specific calculations, but eventually the calculations will be included in the excel file. Once you have updated all of the guidelines, then upload the CCME file to R. The NRV function will pull the guideline data from this file to render the guideline on the box plots. Future versions will render the description of the guideline on the plot.
 
 
