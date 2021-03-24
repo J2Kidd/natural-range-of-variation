@@ -1,4 +1,4 @@
-#About NRV#
+#About NRV
 
 The goal of NRV is to help government personnel and consultants calculate baseline values for water quality parameters using the Natural Range of Variation (NRV) method developed by the Northwest Territories Cumulative Impact Monitoring Program (NWT CIMP). This NRV method calculates the lower and upper thresholds for individual water quality parameters using either the Tukey Inner Fence (TIF) method for parameters with ≤10% outlier and ≤77% results below the detection limit, or the Median±2MAD methods for parameters with ≤50% outlier and ≤50% results below the detection limit. 
 
