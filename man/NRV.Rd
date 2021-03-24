@@ -24,10 +24,11 @@ NRV(
 Summary table of results and boxplots for all specified parameters
 }
 \description{
-must run NRV(list(WCTL))
-must upload CCME.csv file (use readr, change value column to character data type)
-Notes: edit to have 1 dataFrame but multiple sites (i.e., run analyses for each siteID)
-Calculate NRV summary table and generate boxplots
-Can turn off boxplots with generateplots=FALSE (default =TRUE)
-Can turn off guidelines for boxplots with renderGuideline=FALSE (default =TRUE)
+This function generates a table with the NRV thresholds and associated summary statistics for each parameter in your data frame.
+}
+\details{
+By default, the function also generates box plots for each parameter in your data frame. Can turn off boxplots with generateplots=FALSE (default =TRUE)
+You can also select specific parameters to run the boxplots on. E.g., NRV(list(NRV_WC,NRV_TL),"ph","alkalinity_total")
+By default, the function renders guidelines from the CCME table (see README file). Turn off guidelines for box plots with renderGuideline=FALSE
+You must upload the CCME.csv file from the package's git repository (use readr, change value column to character data type)
 }

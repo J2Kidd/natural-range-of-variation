@@ -18,8 +18,7 @@
 #' @param result Column with raw result values
 #'
 #' @return Data frame that subsequent functions can read to calculate the NRV and summary statistics
-#' @importFrom stringr str_replace_all
-#' @importFrom dplyr tibble
+#' @import stringr dplyr
 #' @export
 #'
 NRV_summ_df<-function(site,date,parameter,fraction,detectionLimit,detectionCondition,result) {
@@ -27,27 +26,27 @@ NRV_summ_df<-function(site,date,parameter,fraction,detectionLimit,detectionCondi
   # Remove the characters we dont want
   parameter = tolower(parameter)
   fraction = tolower(fraction)
-  parameter = stringr::str_replace_all(parameter," ","_")
-  parameter = stringr::str_replace_all(parameter,",","")
-  parameter = stringr::str_replace_all(parameter,"\\.","_")
+  parameter = str_replace_all(parameter," ","_")
+  parameter = str_replace_all(parameter,",","")
+  parameter = str_replace_all(parameter,"\\.","_")
   parameter = gsub("\\(|\\)", "", parameter)
 
-  fraction = stringr::str_replace_all(fraction," ","_")
-  fraction = stringr::str_replace_all(fraction,",","")
-  fraction = stringr::str_replace_all(fraction,"\\.","_")
+  fraction = str_replace_all(fraction," ","_")
+  fraction = str_replace_all(fraction,",","")
+  fraction = str_replace_all(fraction,"\\.","_")
   fraction = gsub("\\(|\\)", "", fraction)
 
   #generate the field we want from the combination of parameter and fraction
   parameter = paste(parameter,fraction,sep="_",collapse = NULL)
-  parameter = stringr::str_replace_all(parameter,"_NA","")
+  parameter = str_replace_all(parameter,"_NA","")
 
   #create the final table of clean data
-  dplyr::tibble("Site" = site,
+  tibble("Site" = site,
          "Date" = date,
          "Parameter" = parameter,
          "DL" = detectionLimit,
-         "RDC" = ifelse(detectionCondition %in% "below detection limit","BDL","NUM"),
-         "ResultRaw" =ifelse(detectionCondition %in% "below detection limit",detectionLimit,result),
-         "ResultCalc" =ifelse(detectionCondition %in% "below detection limit",detectionLimit/2,result))
+         "RDC" = detectionCondition, #BDL or NUM are the acceptable values for this column
+         "ResultRaw" =ifelse(detectionCondition %in% "BDL",detectionLimit,result),
+         "ResultCalc" =ifelse(detectionCondition %in% "BDL",detectionLimit/2,result))
 
 }

@@ -5,7 +5,7 @@ Authors@R:
     person(given = "Jess",
            family = "Kidd",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
+           email = "jess87kidd@gmail.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: The NRV package provides a function that will calculate the natural range of variation (NRV) and associated summary statistics for water quality parameters. In addition, the function will produce boxplots for each parameter. This function is dependent on the data frame being formatted according to the example file in the package. 
 License: MIT + file LICENSE
