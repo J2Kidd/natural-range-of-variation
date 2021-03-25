@@ -65,7 +65,7 @@ Your data frame **must** be formatted in a specific way. View example data frame
 
 7. **RDC**: Result Detection Condition: A column that identifies if the result is below the detection limit. 
 
-**Note:** If the result is below the detection limit, the identifier must read *BDL*. If the result was not below the detection limit then the column should  read *NUM*.
+**Note:** If the result is below the detection limit, the identifier must read *BDL*. If the result was not below the detection limit then the column should  read *DET*.
 
 
 ## Example Usage

@@ -45,7 +45,7 @@ NRV_summ_df<-function(site,date,parameter,fraction,detectionLimit,detectionCondi
          "Date" = date,
          "Parameter" = parameter,
          "DL" = detectionLimit,
-         "RDC" = detectionCondition, #BDL or NUM are the acceptable values for this column
+         "RDC" = detectionCondition, #BDL or DET are the acceptable values for this column
          "ResultRaw" =ifelse(detectionCondition %in% "BDL",detectionLimit,result),
          "ResultCalc" =ifelse(detectionCondition %in% "BDL",detectionLimit/2,result))
 
