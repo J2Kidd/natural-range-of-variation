@@ -19,11 +19,11 @@ NRV_stats <- function(x) {
                        paste0("<", min(x$ResultRaw[x$RDC == "BDL"])),
                        paste0("<", min(x$ResultRaw[x$RDC == "BDL"]), " - <",
                               max(x$ResultRaw[x$RDC == "BDL"]))))
-  mux <- round(mean(x$ResultCalc, na.rm = TRUE), 4)
+  meanx <- round(mean(x$ResultCalc, na.rm = TRUE), 4)
   sdx <- ifelse(n == 1, "NC", as.character(signif(stats::sd(x$ResultCalc, na.rm = TRUE), 3)))
   minx <- min_val(x)
   maxx <- max_val(x)
-  med <- stats::median(x$ResultCalc)
+  medx <- stats::median(x$ResultCalc)
   quax <- round(stats::quantile(x$ResultCalc, c(0.25, 0.75, 0.98)), 4)
   Q1 <- round(stats::quantile(x$ResultCalc, 0.25), 10)
   Q3 <- round(stats::quantile(x$ResultCalc, 0.75), 10)
@@ -40,11 +40,11 @@ NRV_stats <- function(x) {
          "nonDetectRange" = ndr,
          "outlierNumber" = outNum,
          "percentOutliers" = PON,
-         "MEAN" = round(mux, 4),
+         "MEAN" = round(meanx, 4),
          "SD" = sdx,
          "MIN" = minx,
          "MAX" = maxx,
-         "MED" = med,
+         "MED" = medx,
          "Q1" = quax[1],
          "Q3" = quax[2],
          "P98" = quax[3],
