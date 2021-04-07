@@ -2,6 +2,7 @@
 Acenaphthene,5.8,upper_guideline,,ug/L
 Acridine,4.4,upper_guideline,,ug/L
 aldicarb,1,upper_guideline,,ug/L
+aluminum,100,upper_guideline,,ug/L
 ammonia,0.019,lower_guideline,Y,mg/L
 aniline,2.2,upper_guideline,,ug/L
 Anthracene,0.012,upper_guideline,,ug/L
@@ -103,3 +104,4 @@ uranium,33,short_term_guideline,,ug/L
 uranium,15, long_term_guideline,,ug/L
 zinc,37,short_term_guideline,Y,ug/L
 zinc,7, long_term_guideline,Y,ug/L
+silver,0.25,long_tem_guideline,,ug/L
