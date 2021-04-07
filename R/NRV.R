@@ -9,7 +9,7 @@
 #'
 #' @param inputDatas Single data frame that contains information for each site, or multiple data frames if site data are separated
 #' @param parameters Default is NULL, which will run the function on each unique parameter in the data frame. Option to select specific parameters from the data frame.
-#' @param generateplots Default is TRUE, which will generate box plots for each parameter in the data frame (unless specific parameters are provided for the "parameter" argument). Set to FALSE if you do not want box plots generated
+#' @param generatePlots Default is TRUE, which will generate box plots for each parameter in the data frame (unless specific parameters are provided for the "parameter" argument). Set to FALSE if you do not want box plots generated
 #' @param renderGuideline Default set to TRUE, which will render all applicable guidelines for each parameter. See the CCME table to confirm the guidelines are appropriate for your dataset. Set to FALSE if the guideline skews the image of the box plot (e.g., guideline is an order of magnitude larger than your maximum value)
 #'
 #' @return Summary table of results and boxplots for all specified parameters
@@ -19,7 +19,7 @@
 #' @export
 #' @example NRV(list(NRV_WC,NRV_TL))
 #'
-NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TRUE) {
+NRV <- function(inputDatas,parameters=NULL,generatePlots=TRUE,renderGuideline=TRUE) {
   if(!is.list(inputDatas)) {
     inputDatas = list(inputDatas)
   }
@@ -43,7 +43,7 @@ NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TR
   NRV_table<-NRV_stats_table(totalNRV)
   tibble::view(NRV_table)
 
-  if(generateplots == TRUE) {
+  if(generatePlots == TRUE) {
     boxes<-NRV_box_df(totalNRV)
     ## cast date objects to string objects so sqldf doesnt try reformat them
     boxes$Date <- as.character(boxes$Date)

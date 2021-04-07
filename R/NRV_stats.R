@@ -19,14 +19,14 @@ NRV_stats <- function(x) {
                        paste0("<", min(x$ResultRaw[x$RDC == "BDL"])),
                        paste0("<", min(x$ResultRaw[x$RDC == "BDL"]), " - <",
                               max(x$ResultRaw[x$RDC == "BDL"]))))
-  meanx <- round(mean(x$ResultCalc, na.rm = TRUE), 4)
+  meanx <- signif(mean(x$ResultCalc, na.rm = TRUE), 3)
   sdx <- ifelse(n == 1, "NC", as.character(signif(stats::sd(x$ResultCalc, na.rm = TRUE), 3)))
   minx <- min_val(x)
   maxx <- max_val(x)
   medx <- stats::median(x$ResultCalc)
-  quax <- round(stats::quantile(x$ResultCalc, c(0.25, 0.75, 0.98)), 4)
-  Q1 <- round(stats::quantile(x$ResultCalc, 0.25), 10)
-  Q3 <- round(stats::quantile(x$ResultCalc, 0.75), 10)
+  quanx <- signif(stats::quantile(x$ResultCalc, c(0.25, 0.75, 0.98)), 3)
+  Q1 <- round(stats::quantile(x$ResultCalc, 0.25), 1)
+  Q3 <- round(stats::quantile(x$ResultCalc, 0.75), 1)
   IQRx <- (stats::IQR(x$ResultCalc))*1.5
   outlier <- expss::count_if(expss::gt(Q3+IQRx),x$ResultCalc) + expss::count_if(expss::lt(Q1-IQRx),x$ResultCalc)
   outNum <- ifelse(outlier > 0, outlier, 0)
@@ -45,9 +45,9 @@ NRV_stats <- function(x) {
          "MIN" = minx,
          "MAX" = maxx,
          "MED" = medx,
-         "Q1" = quax[1],
-         "Q3" = quax[2],
-         "P98" = quax[3],
+         "Q1" = quanx[1],
+         "Q3" = quanx[2],
+         "P98" = quanx[3],
          "NRVMethod" = NRV_method,
          "lowerThreshold" = lower,
          "upperThreshold" = upper)
