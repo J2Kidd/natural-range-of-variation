@@ -17,20 +17,28 @@ By default, the function generates box plots for each water quality parameter in
 ## Build instructions for creating the NRV package from source
 
 1. Download the source code and open "NRV.Rproj" in RStudio
-2. In the console type `library("devtools")` to download the development toolkit
-3. In the console type `check()` to build the package
-4. In the console type `install()` to install the package
+2. In the console type `library("devtools")` to download the development toolkit. NB if this is the first time you're using "devtools" you'll have to first install the package by typing `install.packages("devtools")` or you will get an error message `Error in library("devtools") : there is no package called ‘devtools’`
+3. In the console type `install()` to install the package
+4. Include the lib with `library(NRV)` so you can start using it
 
 ## Using the NRV package from your project
 
 1. First, be sure to follow the steps above to create and install the package in your local environment
-2. After editing the CCME.csv guidelines file in the "ExampleData" folder to match your site-specific requirements, import the file. For details on the file itself, see the section below under the heading **About the CCME Data Frame**. To Import the file:
-3.1 From the "Environment" tab in RStudio click "Import Dataset"
-3.2 Select "From Text (readr)"
-3.3 Navigate to the "ExampleData"" folder and select "CCME.csv"
-3.4 Set the data type on the "value" column to be "Character"
-3.5 Click "Import"
-3.6 Celebrate with beer.
+2. After editing the CCME.csv guidelines file in the "ExampleData" folder to match your site-specific requirements, import the file. For details on the file itself, see the section below under the heading **About the CCME Data Frame**. To Import the file:  
+3.1 From the "Environment" tab in RStudio click "Import Dataset"  
+3.2 Select "From Text (readr)"  
+3.3 Navigate to the "ExampleData"" folder and select "CCME.csv"  
+3.4 **IMPORTANT** Set the data type on the "value" column to be "Character"  
+3.5 Click "Import"  
+
+4. Import a sample dataset so you can test the function works.  
+4.1 From the "Environment" tab in RStudio click "Import Dataset" 
+4.2 Select "From Text (readr)"  
+4.3  Navigate to the "ExampleData"" folder and select "NRV_WC.csv" 
+4.4 Click "Import"  
+
+5. Run the NRV function on two data points to test it is working. In my example we're using ph and alkalinity_total `NRV(list(NRV_WC),list("ph","alkalinity_total"))` You can optionally run for all parameters by omitting the list as follows `NRV(list(NRV_WC))`
+6. Observe the output, celebrate with beer!
 
 # Data Frame Formatting
 Your data frame **MUST** be formatted in a specific way. View example data frames "NRV_WC" and "NRV_TL" located in the ExampleData folder of the NRV project's git repository to see which columns are required and the type of data inputs for each column. Your data frame can contain additional columns (e.g, WaterbodyID, Latitude, Longitude) that the NRV function will ignore. The required columns are:
