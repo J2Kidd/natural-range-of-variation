@@ -1,0 +1,107 @@
+﻿parameter,value,description,dependencies,units
+Acenaphthene,5.8,upper_guideline,,ug/L
+Acridine,4.4,upper_guideline,,ug/L
+aldicarb,1,upper_guideline,,ug/L
+aluminum,100,upper_guideline,,ug/L
+ammonia,0.019,lower_guideline,Y,mg/L
+aniline,2.2,upper_guideline,,ug/L
+Anthracene,0.012,upper_guideline,,ug/L
+arsenic,5,upper_guideline,,ug/L
+atrazine,1.8,upper_guideline,,ug/L
+benz_a_anthracene,0.018,upper_guideline,,ug/L
+benzene,370,upper_guideline,,ug/L
+Benzo_a_pyrene,0.015,upper_guideline,,ug/L
+boron,1500, long_term_guideline,,ug/l
+boron,29000,short_term_guideline,,ug/l
+bromacil,5,upper_guideline,,ug/L
+bromoxynil,5,upper_guideline,,ug/L
+cadmium,0.09,short_term_guideline,Y,ug/L
+cadmium,1, long_term_guideline,Y,ug/L
+captan,1.3,upper_guideline,,ug/L
+carbamazepine,10, long_term_guideline,,ug/l
+carbaryl,0.2,long_tem_guideline,,ug/l
+carbaryl,3.3,short_term_guideline,,ug/l
+carbofuran,1.8,upper_guideline,,ug/L
+chloride,640,short_term_guideline,,mg/L
+chloride,120, long_term_guideline,,mg/L
+chlorothalonil,0.18,upper_guideline,,ug/L
+chlorpyrifos,0.002,long_tem_guideline,,ug/l
+chlorpyrifos,0.02,short_term_guideline,,ug/l
+chromium3,8.9,upper_guideline,,ug/L
+chromium6,1,upper_guideline,,ug/L
+cyanazine,2,upper_guideline,,ug/L
+dbp,19,upper_guideline,,ug/L
+dehp,16,upper_guideline,,ug/l
+deltamethrin,0.0004,upper_guideline,,ug/L
+dicamba,10,upper_guideline,,ug/L
+dichlorobenzene,0.7,upper_guideline,,ug/l
+dichlorobenzene13,150,upper_guideline,,ug/L
+dichlorobenzene14,26,upper_guideline,,ug/L
+dichloroethane12,100,upper_guideline,,ug/L
+dichloromethane,98.1,upper_guideline,,ug/L
+diclofop-methyl,6.1,upper_guideline,,ug/L
+didecyl_dimethyl_ammonium_chloride,1.5,upper_guideline,,ug/L
+diisopropanolamine,1.6,upper_guideline,,mg/L
+dimethoate,6.2,upper_guideline,,ug/L
+dinoseb ,0.05,upper_guideline,,ug/L
+dissolved_oxygen,9.5,upper_guideline,Y,mg/L
+dissolved_oxygen,6.5,lower_guideline,Y,mg/L
+endosulfan,0.003,long_tem_guideline,,ug/l
+endosulfan,0.06,short_term_guideline,,ug/l
+ethylbenzene,90,upper_guideline,,ug/L
+ethylene_glycol,192000,upper_guideline,,ug/L
+fluoranthene,0.04,upper_guideline,,ug/L
+fluorene,3,upper_guideline,,ug/l
+fluoride,0.12,upper_guideline,,mg/L
+glyphosate,800,long_tem_guideline,,ug/L
+glyphosate,27000,short_term_guideline,,ug/l
+hexachlorobutadiene,1.3,upper_guideline,,ug/l
+imidacloprid,0.23,upper_guideline,,ug/l
+ipbc,1.9,upper_guideline,,ug/l
+linuron,7,upper_guideline,,ug/l
+manganese,3600,short_term_guideline,Y,ug/l
+manganese,430, long_term_guideline,Y,ug/L
+mcpa,2.6,upper_guideline,,ug/l
+mercury,26,upper_guideline,,ng/l
+methoprene,0.09,upper_guideline,,ug/L
+methyl_tertiary_butyl,10000,upper_guideline,,mg/L
+methylmercury,4,upper_guideline,,ng/l
+metolachlor,7.8,upper_guideline,,ug/l
+metribuzin,1,upper_guideline,,ug/L
+molybdenum,73,upper_guideline,,ug/L
+naphthalene,1.1,upper_guideline,,ug/L
+nitrate,550,short_term_guideline,,mg/L
+nitrate,13, long_term_guideline,,mg/L
+nonylphenol,1,upper_guideline,,ug/L
+pentachlorobenzene,6,upper_guideline,,ug/L
+permethrin,0.004,upper_guideline,,ug/L
+ph,6.5,lower_guideline,,
+ph,9,upper_guideline,,
+picloram,29,upper_guideline,,ug/L
+propylene glycol,500000,upper_guideline,,ug/L
+pyrene,0.025,upper_guideline,,ug/L
+quinoline,3.4,upper_guideline,,ug/L
+reactive_chlorine,0.5,upper_guideline,,ug/L
+silver,0.25,lower_guideline,,ug/L
+simazine,10,upper_guideline,,ug/L
+styrene,72,upper_guideline,,ug/L
+sulfolane,50000,upper_guideline,,mg/L
+tebuthiuron,1.6,upper_guideline,,ug/L
+tetrachloroethene1122,111,upper_guideline,,ug/L
+tetrachloromethane,13.3,upper_guideline,,ug/L
+thallium,0.8,lower_guideline,,ug/L
+toluene,2,upper_guideline,,ug/L
+tributyltin,0.008,upper_guideline,,ug/l
+trichlorfon,0.009, long_term_guideline,,ug/l
+trichlorfon,1.1,short_term_guideline,,ug/L
+trichlorobenzene123,8,upper_guideline,,ug/L
+trichlorobenzene124,24,upper_guideline,,ug/L
+trichloroethene112,21,upper_guideline,,ug/L
+trichloromethane,1.8,upper_guideline,,ug/L
+trifluralin,0.2,upper_guideline,,ug/L
+triphenyltin,0.022,upper_guideline,,ug/L
+uranium,33,short_term_guideline,,ug/L
+uranium,15, long_term_guideline,,ug/L
+zinc,37,short_term_guideline,Y,ug/L
+zinc,7, long_term_guideline,Y,ug/L
+silver,0.25,long_tem_guideline,,ug/L

@@ -7,7 +7,7 @@
 NRV(
   inputDatas,
   parameters = NULL,
-  generateplots = TRUE,
+  generatePlots = TRUE,
   renderGuideline = TRUE
 )
 }
@@ -16,7 +16,7 @@ NRV(
 
 \item{parameters}{Default is NULL, which will run the function on each unique parameter in the data frame. Option to select specific parameters from the data frame.}
 
-\item{generateplots}{Default is TRUE, which will generate box plots for each parameter in the data frame (unless specific parameters are provided for the "parameter" argument). Set to FALSE if you do not want box plots generated}
+\item{generatePlots}{Default is TRUE, which will generate box plots for each parameter in the data frame (unless specific parameters are provided for the "parameter" argument). Set to FALSE if you do not want box plots generated}
 
 \item{renderGuideline}{Default set to TRUE, which will render all applicable guidelines for each parameter. See the CCME table to confirm the guidelines are appropriate for your dataset. Set to FALSE if the guideline skews the image of the box plot (e.g., guideline is an order of magnitude larger than your maximum value)}
 }
