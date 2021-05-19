@@ -12,7 +12,7 @@ max_val <- function(x) {
 
   max.qual <- unique(max.record$RDC)
 
-  max.final <- if(any(max.qual %in% 'NUM')) { as.character(max.val) } else { paste0('<', max.val) }
+  max.final <- if(any(max.qual %in% 'DET')) { as.character(max.val) } else { paste0('<', max.val) }
 
   return(max.final)
 
