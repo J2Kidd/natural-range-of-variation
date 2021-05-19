@@ -2,7 +2,7 @@
 % Please edit documentation in R/getParamGuideline.R
 \name{getParamGuideline}
 \alias{getParamGuideline}
-\title{Get the CCME guideline for the selected parameter}
+\title{CCME Freshwater Aquatic Life guidelines}
 \usage{
 getParamGuideline(param)
 }
@@ -13,5 +13,9 @@ getParamGuideline(param)
 Generates guidelines values to be presented in the boxplots
 }
 \description{
-#Get the CCME guideline for the selected parameter
+The function retrieves guideline values from the CCME table for each matching parameter in your data frame.
+This Function is used by the NRV function to render guidelines on boxplots.
+You must download the CCME table from the package's git repository and manually edit the site-specific guidelines.
+Once you have reviewed the CCME table and edited for your site, then read it into your R session.
+Ensure the CCME table is labeled: CCME.
 }

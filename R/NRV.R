@@ -1,11 +1,11 @@
 #' Natural Range of Variation
 #'
-#'must run NRV(list(WCTL))
-#'must upload CCME.csv file (use readr, change value column to character data type)
-#'Notes: edit to have 1 dataFrame but multiple sites (i.e., run analyses for each siteID)
-#'Calculate NRV summary table and generate boxplots
-#'Can turn off boxplots with generateplots=FALSE (default =TRUE)
-#'Can turn off guidelines for boxplots with renderGuideline=FALSE (default =TRUE)
+#'This function generates a table with the NRV thresholds and associated summary statistics for each parameter in your data frame.
+#'
+#'By default, the function also generates box plots for each parameter in your data frame. Can turn off boxplots with generateplots=FALSE (default =TRUE)
+#'You can also select specific parameters to run the boxplots on. E.g., NRV(list(NRV_WC,NRV_TL),"ph","alkalinity_total")
+#'By default, the function renders guidelines from the CCME table (see README file). Turn off guidelines for box plots with renderGuideline=FALSE
+#'You must upload the CCME.csv file from the package's git repository (use readr, change value column to character data type)
 #'
 #' @param inputDatas Single data frame that contains information for each site, or multiple data frames if site data are separated
 #' @param parameters Default is NULL, which will run the function on each unique parameter in the data frame. Option to select specific parameters from the data frame.
@@ -17,8 +17,13 @@
 #' @import sqldf
 #' @import tibble
 #' @export
+#' @example NRV(list(NRV_WC,NRV_TL))
 #'
 NRV <- function(inputDatas,parameters=NULL,generateplots=TRUE,renderGuideline=TRUE) {
+  if(!is.list(inputDatas)) {
+    inputDatas = list(inputDatas)
+  }
+
   count = 0
   totalNRV = NULL
 

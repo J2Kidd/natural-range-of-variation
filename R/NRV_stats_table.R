@@ -5,7 +5,7 @@
 #' @param dataFrame The data frame that contains the information formatted for the function
 #'
 #' @return Table with the NRV thresholds and associated summary statistics
-#' @importFrom dplyr group_by do ungroup
+#' @importFrom dplyr group_by do ungroup %>%
 #' @export
 NRV_stats_table<-function(dataFrame) {
   Site<-Parameter<-NULL

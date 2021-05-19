@@ -1,12 +1,11 @@
-#' Get the CCME guideline for the selected parameter
+#' CCME Freshwater Aquatic Life guidelines
 #'
-#'#Get the CCME guideline for the selected parameter
-#Function selects the guidelines based on CCME guidelines for applicable parameters and calculates guidelines using mean hardness values
-#Function used by the boxplot function, so must be run BEFORE the boxplot function is used
-#Must have dataset formatted based on structure presented in README.md file
-#Many guidelines are calculated based on hardness
-#Units for metals guidelines are in ug/L
-
+#'The function retrieves guideline values from the CCME table for each matching parameter in your data frame.
+#'This Function is used by the NRV function to render guidelines on boxplots.
+#'You must download the CCME table from the package's git repository and manually edit the site-specific guidelines.
+#'Once you have reviewed the CCME table and edited for your site, then read it into your R session.
+#'Ensure the CCME table is labeled: CCME.
+#'
 #' @param param The name of the parameter, which must be in the exact format/spelling presented in the parameter list in the README.md file
 #'
 #' @return Generates guidelines values to be presented in the boxplots

@@ -27,14 +27,14 @@ NRV_stats <- function(x) {
   quax <- round(stats::quantile(x$ResultCalc, c(0.25, 0.75, 0.98)), 4)
   Q1 <- round(stats::quantile(x$ResultCalc, 0.25), 10)
   Q3 <- round(stats::quantile(x$ResultCalc, 0.75), 10)
-  outlier <- expss:count_if(expss:gt(Q3),x$ResultCalc) + expss:count_if(expss:lt(Q1),x$ResultCalc)
+  outlier <- expss::count_if(expss::gt(Q3),x$ResultCalc) + expss::count_if(expss::lt(Q1),x$ResultCalc)
   outNum <- ifelse(outlier > 0, outlier, 0)
   PON <- round(((outNum / n) * 100),1)
   NRV_method <- ifelse(PON <= 10 && pnd <= 77, "TIF", ifelse(PON <= 50 && pnd <= 50 , "M2M", NA))
   lower <- ifelse(NRV_method == "TIF", TIF_Low(x$ResultCalc), ifelse(NRV_method == "M2M" , M2M_Low(x$ResultCalc), NA))
   upper <- ifelse(NRV_method == "TIF", TIF_High(x$ResultCalc), ifelse(NRV_method == "M2M" , M2M_High(x$ResultCalc), NA))
 
-  dplyr:tibble("n" = n,
+  dplyr::tibble("n" = n,
          "percentNonDetect" = pnd,
          "nonDetectRange" = ndr,
          "outlierNumber" = outNum,

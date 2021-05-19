@@ -7,7 +7,7 @@
 #'
 #' @return Data frame that the boxplot function can be run on
 #' @importFrom tidyr spread
-#' @importFrom dplyr select
+#' @importFrom dplyr select %>%
 #' @export
 
 NRV_box_df<-function(x) {
