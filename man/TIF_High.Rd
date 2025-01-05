@@ -4,10 +4,12 @@
 \alias{TIF_High}
 \title{Upper Tukey Inner Fence (TIF) Threshold}
 \usage{
-TIF_High(resultCalc)
+TIF_High(x, na.rm = TRUE)
 }
 \arguments{
-\item{resultCalc}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{The results column that includes results below the detection limit as half the detection limit}
+
+\item{na.rm}{Default handle NA values}
 }
 \value{
 Upper threshold value

@@ -4,24 +4,15 @@
 \alias{NRV}
 \title{Natural Range of Variation}
 \usage{
-NRV(
-  inputDatas,
-  parameters = NULL,
-  generatePlots = TRUE,
-  renderGuideline = TRUE
-)
+NRV(inputData, data_type = "reference")
 }
 \arguments{
-\item{inputDatas}{Single data frame that contains information for each site, or multiple data frames if site data are separated}
+\item{inputData}{Data frame that contains sample data to be included in the NRV calculation}
 
-\item{parameters}{Default is NULL, which will run the function on each unique parameter in the data frame. Option to select specific parameters from the data frame.}
-
-\item{generatePlots}{Default is TRUE, which will generate box plots for each parameter in the data frame (unless specific parameters are provided for the "parameter" argument). Set to FALSE if you do not want box plots generated}
-
-\item{renderGuideline}{Default set to TRUE, which will render all applicable guidelines for each parameter. See the CCME table to confirm the guidelines are appropriate for your dataset. Set to FALSE if the guideline skews the image of the box plot (e.g., guideline is an order of magnitude larger than your maximum value)}
+\item{data_type}{The user has to choose if they are using "reference" site data or "impacted" data that may contain samples from impacted sites. Default is "reference"}
 }
 \value{
-Summary table of results and boxplots for all specified parameters
+Summary table of results all unique parameters
 }
 \description{
 This function generates a table with the NRV thresholds and associated summary statistics for each parameter in your data frame.

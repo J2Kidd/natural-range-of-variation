@@ -7,10 +7,10 @@ Calculate upper threshold of Median±2MA calculation
 Function used in NRV calculation function
 Function removes NA values}
 \usage{
-M2M_High(resultCalc)
+M2M_High(x)
 }
 \arguments{
-\item{resultCalc}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{The results column that includes results below the detection limit as half the detection limit}
 }
 \value{
 upper threshold of Median±2MAD calculation

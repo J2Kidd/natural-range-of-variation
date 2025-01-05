@@ -63,27 +63,23 @@ Your data frame **MUST** be formatted in a specific way. View example data frame
 
 5. **ResultCalc**: This is the column that contains the data that the summary statistics and NRV calculations will be performed on. The column must contain the raw values for all results above the detection limit **AND** the value you choose to represent the results that are below the detection limit (e.g., half the detection limit). 
 
-6. **DL**: Detection Limit: A column that identifies the detection limit for the parameter. 
+6. **ResultCalcLog**: This is the column that contains the data that the summary statistics and NRV calculations will be performed on if log-transformation is required. The column must contain the log-transformed values from the ResultCalc column. Transformation needs to be with the natural logarithm (R function log(x)). 
+
+7. **DL**: Detection Limit: A column that identifies the detection limit for the parameter. 
 
 **Note:** The DL column should not include any units.
 
-7. **RDC**: Result Detection Condition: A column that identifies if the result is below the detection limit. 
+8. **RDC**: Result Detection Condition: A column that identifies if the result is below the detection limit. 
 
 **Note:** If the result is below the detection limit, the identifier must read *BDL*. If the result was not below the detection limit then the column must read *DET*.
 
 
 ## Example Usage
-If you have two (or more) data frames with site data (i.e.,one data frame for each site) and want box plots generated for each parameter and all applicable guidelines rendered.
-`NRV(list(NRV_WC,NRV_TL))`
+If you have a data frame that only contains data collected from reference sites. In this example, the data frame is titled "myData"
+`NRV(myData)`
 
-If you have only one data frame and you only want box plots generated for specific parameters
-`NRV(list(NRV_WC),list("ph","alkalinity_total"))`
-
-If you have only one data frame and you only want box plots generated for specific parameters and you don't want to guideline rendered (e.g., the guideline is much higher than your max value so it skews your box plot)
-`NRV(list(NRV_WC),list("ph","alkalinity_total"), renderGuideline=FALSE)`
-
-If you have only one data frame and you do not want any box plots generated
-`NRV(list(NRV_WC),list("ph", "alkalinity_total"), generatePlots=FALSE)`
+If you have a data frame that contains data from potentially impacted sites. In this example, the data frame is titled "myData"
+`NRV(myData, data_type="impacted")`
 
 ## Known Issues
 

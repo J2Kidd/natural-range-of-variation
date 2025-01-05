@@ -4,10 +4,10 @@
 \alias{TIF_Low}
 \title{Upper Tukey Inner Fence (TIF) Threshold}
 \usage{
-TIF_Low(resultCalc)
+TIF_Low(x)
 }
 \arguments{
-\item{resultCalc}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{The results column that includes results below the detection limit as half the detection limit}
 }
 \value{
 Lower threshold value

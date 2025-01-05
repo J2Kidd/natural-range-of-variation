@@ -13,7 +13,7 @@
 NRV_box_df<-function(x) {
 
   x<-x %>%
-    dplyr::select(-c(ResultRaw,RDC,DL))%>%
-    tidyr::spread(Parameter, ResultCalc)
+    dplyr::select(-c(x$ResultRaw,x$RDC,x$DL))%>%
+    tidyr::spread(x$Parameter, x$ResultCalc)
 
 }
