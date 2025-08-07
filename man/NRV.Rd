@@ -4,12 +4,10 @@
 \alias{NRV}
 \title{Natural Range of Variation}
 \usage{
-NRV(inputData, data_type = "reference")
+NRV(inputData)
 }
 \arguments{
 \item{inputData}{Data frame that contains sample data to be included in the NRV calculation}
-
-\item{data_type}{The user has to choose if they are using "reference" site data or "impacted" data that may contain samples from impacted sites. Default is "reference"}
 }
 \value{
 Summary table of results all unique parameters

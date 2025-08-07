@@ -3,8 +3,9 @@
 \name{M2M_LowLog}
 \alias{M2M_LowLog}
 \title{M2M_LowLog
-Calculate lower threshold of Median±2MA calculation on data using the natural logarithm (ie.., log())
+Calculate lower threshold of Median±2MAD calculation on data using the natural logarithm (ie.., log())
 The calculation returns the value transformed back to its original scale using the exp() function
+The calculation returns the value as 0 if the result is a negative number
 Function used in NRV calculation function
 Function removes NA values}
 \usage{
@@ -18,8 +19,9 @@ lower threshold of Median±2MAD calculation that is back-transformed to its orig
 }
 \description{
 M2M_LowLog
-Calculate lower threshold of Median±2MA calculation on data using the natural logarithm (ie.., log())
+Calculate lower threshold of Median±2MAD calculation on data using the natural logarithm (ie.., log())
 The calculation returns the value transformed back to its original scale using the exp() function
+The calculation returns the value as 0 if the result is a negative number
 Function used in NRV calculation function
 Function removes NA values
 }

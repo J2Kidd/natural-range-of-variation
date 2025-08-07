@@ -3,7 +3,7 @@
 \name{M2M_HighLog}
 \alias{M2M_HighLog}
 \title{M2M_HighLog
-Calculate upper threshold of Median±2MA calculation on data using the natural logarithm (ie.., log())
+Calculate upper threshold of Median±2MAD calculation on data using the natural logarithm (ie.., log())
 The calculation returns the value transformed back to its original scale using the exp() function
 Function used in NRV calculation function
 Function removes NA values}
@@ -11,14 +11,14 @@ Function removes NA values}
 M2M_HighLog(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit and is log-transformed using the natural logarithm}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit and is log-transformed using the natural logarithm)}
 }
 \value{
 upper threshold of Median±2MAD calculation that is back-transformed to its original scale
 }
 \description{
 M2M_HighLog
-Calculate upper threshold of Median±2MA calculation on data using the natural logarithm (ie.., log())
+Calculate upper threshold of Median±2MAD calculation on data using the natural logarithm (ie.., log())
 The calculation returns the value transformed back to its original scale using the exp() function
 Function used in NRV calculation function
 Function removes NA values

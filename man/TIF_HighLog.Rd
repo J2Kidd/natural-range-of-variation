@@ -2,16 +2,17 @@
 % Please edit documentation in R/TIF_HighLog.R
 \name{TIF_HighLog}
 \alias{TIF_HighLog}
-\title{Upper Tukey Inner Fence (TIF) Threshold}
+\title{Upper Tukey Inner Fence (TIF) Threshold calculated using log-transformed data}
 \usage{
 TIF_HighLog(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit and is log-transformed using the natural logarithm)}
 }
 \value{
 Upper threshold value that is back-transformed to its original scale
 }
 \description{
-Calculate upper thresholds of TIF calculation on data transformed using the natural logarithm (i.e., log())
+Calculate upper threshold of TIF calculation on data transformed using the natural logarithm (i.e., log())
+Function removes NA values
 }

@@ -4,16 +4,15 @@
 \alias{TIF_High}
 \title{Upper Tukey Inner Fence (TIF) Threshold}
 \usage{
-TIF_High(x, na.rm = TRUE)
+TIF_High(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
-
-\item{na.rm}{Default handle NA values}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 Upper threshold value
 }
 \description{
-Calculate upper thresholds of TIF calculation
+Calculate upper threshold of TIF calculation
+Function removes NA values
 }

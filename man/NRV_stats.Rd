@@ -4,12 +4,10 @@
 \alias{NRV_stats}
 \title{NRV Stats Calculation}
 \usage{
-NRV_stats(x, data_type = "reference")
+NRV_stats(x)
 }
 \arguments{
 \item{x}{Data frame with water quality data for each site}
-
-\item{data_type}{Data type is set as reference or impacted by the user in the NRV function. Default is reference.}
 }
 \value{
 calculations for the NRV stats table

@@ -1,6 +1,6 @@
 Package: NRV
 Title: Calculate natural range of variation for water quality parameters
-Version: 0.0.0.9000
+Version: 0.0.1.0000
 Authors@R: 
     person(given = "Jess",
            family = "Kidd",

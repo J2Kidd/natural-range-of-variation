@@ -4,7 +4,13 @@
 \alias{NRVTimeSeries}
 \title{Create Time Series Plots for NRV}
 \usage{
-NRVTimeSeries(dataDF, thresholdDF, paramName = "ALL", season = "Open-Water")
+NRVTimeSeries(
+  dataDF,
+  thresholdDF,
+  paramName = "ALL",
+  season = "Open-Water",
+  NRVmethod = "TIF"
+)
 }
 \arguments{
 \item{dataDF}{data frame containing the time series data}
@@ -14,6 +20,8 @@ NRVTimeSeries(dataDF, thresholdDF, paramName = "ALL", season = "Open-Water")
 \item{paramName}{name of the parameter to plot; "ALL" indicates that plots should be generated for all parameters}
 
 \item{season}{label for the season to be included in the x-axis title}
+
+\item{NRVmethod}{TIF or M2MAD based on the NRV calculation method you have selected for your study (default is "TIF")}
 }
 \description{
 This function generates time series plots for the specified parameter across all unique parameters

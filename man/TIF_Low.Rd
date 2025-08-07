@@ -2,16 +2,18 @@
 % Please edit documentation in R/TIF_Low.R
 \name{TIF_Low}
 \alias{TIF_Low}
-\title{Upper Tukey Inner Fence (TIF) Threshold}
+\title{Lower Tukey Inner Fence (TIF) Threshold}
 \usage{
 TIF_Low(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 Lower threshold value
 }
 \description{
-Calculate upper thresholds of TIF calculation
+Calculate lower threshold of TIF calculation
+Function removes NA values
+The calculation returns the value as 0 if the result is a negative number
 }

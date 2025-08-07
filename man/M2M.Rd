@@ -2,16 +2,16 @@
 % Please edit documentation in R/M2M.R
 \name{M2M}
 \alias{M2M}
-\title{Calculate Median ±2 Mean Absolute Deviation (MAD)}
+\title{Calculate Median ±2 Median Absolute Deviation (MAD)}
 \usage{
 M2M(x)
 }
 \arguments{
-\item{x}{A water quality parameter}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 The lower and higher threshold of the natural range of variation for the parameter
 }
 \description{
-Calculate the upper and lower range of the natural range of variation (NRV) for a given parameter with the Median ±2 mean absolute deviation calculation
+Calculate the upper and lower range of the natural range of variation (NRV) for a given parameter with the Median ±2 median absolute deviation calculation
 }

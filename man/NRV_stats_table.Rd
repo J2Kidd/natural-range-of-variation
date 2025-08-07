@@ -4,12 +4,10 @@
 \alias{NRV_stats_table}
 \title{NRV Stats Table}
 \usage{
-NRV_stats_table(dataFrame, data_type = "reference")
+NRV_stats_table(dataFrame)
 }
 \arguments{
 \item{dataFrame}{The data frame that contains the information formatted for the function}
-
-\item{data_type}{The data type is set as reference or impacted in the NRV function by the user. Default is reference.}
 }
 \value{
 Table with the NRV thresholds and associated summary statistics

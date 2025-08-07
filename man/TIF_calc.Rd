@@ -4,12 +4,10 @@
 \alias{TIF_calc}
 \title{TIF Calculation}
 \usage{
-TIF_calc(x, na.rm = TRUE)
+TIF_calc(x)
 }
 \arguments{
-\item{x}{Water quality parameter}
-
-\item{na.rm}{Default handle NA values}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 upper and lower thresholds of NRV

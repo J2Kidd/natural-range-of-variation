@@ -3,21 +3,21 @@
 \name{M2M_High}
 \alias{M2M_High}
 \title{M2M_High
-Calculate upper threshold of Median±2MA calculation
+Calculate upper threshold of Median±2MAD calculation
 Function used in NRV calculation function
 Function removes NA values}
 \usage{
 M2M_High(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 upper threshold of Median±2MAD calculation
 }
 \description{
 M2M_High
-Calculate upper threshold of Median±2MA calculation
+Calculate upper threshold of Median±2MAD calculation
 Function used in NRV calculation function
 Function removes NA values
 }

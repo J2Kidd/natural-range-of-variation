@@ -2,16 +2,18 @@
 % Please edit documentation in R/TIF_LowLog.R
 \name{TIF_LowLog}
 \alias{TIF_LowLog}
-\title{Lower Tukey Inner Fence (TIF) Threshold}
+\title{Lower Tukey Inner Fence (TIF) Threshold on log-transformed data}
 \usage{
 TIF_LowLog(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit and is log-transformed using the natural logarithm)}
 }
 \value{
 Lower threshold value that is back-transformed to its original scale
 }
 \description{
-Calculate lower thresholds of TIF calculation on data transformed using the natural logarithm (i.e., log())
+Calculate lower threshold of TIF calculation on data transformed using the natural logarithm (i.e., log())
+Function removes NA values
+The calculation returns the value as 0 if the result is a negative number
 }

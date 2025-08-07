@@ -2,22 +2,24 @@
 % Please edit documentation in R/M2M_Low.R
 \name{M2M_Low}
 \alias{M2M_Low}
-\title{M2M_High
-#'Calculate lower threshold of Median±2MA calculation
+\title{M2M_Low
+Calculate lower threshold of Median±2MAD calculation
+The calculation returns the value as 0 if the result is a negative number
 Function used in NRV calculation function
 Function removes NA values}
 \usage{
 M2M_Low(x)
 }
 \arguments{
-\item{x}{The results column that includes results below the detection limit as half the detection limit}
+\item{x}{Numeric vector of water quality parameter values (results column that includes results below the detection limit as half the detection limit)}
 }
 \value{
 lower threshold of Median±2MAD calculation
 }
 \description{
-M2M_High
-#'Calculate lower threshold of Median±2MA calculation
+M2M_Low
+Calculate lower threshold of Median±2MAD calculation
+The calculation returns the value as 0 if the result is a negative number
 Function used in NRV calculation function
 Function removes NA values
 }
